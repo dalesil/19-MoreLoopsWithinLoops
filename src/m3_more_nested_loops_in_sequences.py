@@ -416,10 +416,7 @@ def first_is_elsewhere_too(seq_seq):
     #   practice at loops within loops (within loops within ...)
     # -------------------------------------------------------------------------
 
-    if seq_seq.count() > 0:
-        return True
-    else:
-        return False
+
 
 
 # -----------------------------------------------------------------------------
