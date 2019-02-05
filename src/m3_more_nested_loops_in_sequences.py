@@ -10,8 +10,8 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
 
 def main():
     """ Calls the other functions to test them. """
-    run_test_largest_number()
-    run_test_largest_negative_number()
+    #run_test_largest_number()
+    #run_test_largest_negative_number()
     run_test_first_is_elsewhere_too()
 
 
@@ -400,7 +400,7 @@ def first_is_elsewhere_too(seq_seq):
     and the given argument is a sequence of sequences.
     """
     # -------------------------------------------------------------------------
-    # TODO: 6. Implement and test this function.
+    # DONE: 6. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # IMPLEMENTATION RESTRICTION:
@@ -416,7 +416,12 @@ def first_is_elsewhere_too(seq_seq):
     #   practice at loops within loops (within loops within ...)
     # -------------------------------------------------------------------------
 
-
+    for j in range(len(seq_seq[0])):
+        for k in range(1, len(seq_seq)):
+            for i in range(len(seq_seq[k])):
+                if seq_seq[k][i] == seq_seq[0][j]:
+                    return True
+    return False
 
 
 # -----------------------------------------------------------------------------
